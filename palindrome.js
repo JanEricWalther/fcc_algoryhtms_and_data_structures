@@ -5,13 +5,10 @@
  */
 function isPalindrome(str) {
 
-  // remove Whitespaces & non-letter-charachters and make everything lower case
   let sanitize = str.replace(/\s/g, "").replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
 
-  // split string into Array, reverse it, join it together again
   let reverse =  sanitize.split("").reverse().join("");
   
-  // return reverse + sanitize;
   return sanitize === reverse;
 }
 
